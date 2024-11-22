@@ -1,0 +1,107 @@
+
+.calendar-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    margin-top: -1rem;
+}
+
+.date-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF7043; /* Orange */
+    text-align: center;
+}
+
+.month-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFA000; /* Gold */
+    cursor: pointer;
+    padding: 0 10px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.month-button:hover {
+    transform: scale(1.2);
+    color: #D84315; /* Dark Orange */
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    color: #388E3C; /* Green */
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.calendar-day.active {
+    background-color: #FFF8E1; /* Light Gold */
+}
+
+.calendar-day.active:hover {
+    background-color: #FFD54F; /* Bright Gold */
+    transform: scale(1.1);
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+.calendar-day.selected {
+    background-color: #4CAF50; /* Light Green */
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.current {
+    border: 2px solid #388E3C; /* Green */
+    font-weight: bold;
+}
+
+.today-button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #FF7043; /* Orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.today-button:hover {
+    background-color: #D84315; /* Darker Orange */
+}

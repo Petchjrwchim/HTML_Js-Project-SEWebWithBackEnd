@@ -1,0 +1,120 @@
+/* General Styles */
+.timetable-wrapper {
+    max-width: 632px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.timetable-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #414141; 
+    text-align: center;
+}
+
+/* Message when no date is selected */
+.no-date-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 50px;
+}
+
+/* Timetable Container */
+.timetable {
+    display: flex;
+    flex-direction: column;
+}
+
+.timetable-header-row {
+    display: flex;
+    background: #FFF8E1;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.time-slot-header,
+.status-slot-header {
+    flex: 1;
+    padding: 5px;
+}
+
+/* Timetable Rows */
+.timetable-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.timetable-row {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.timetable-row:last-child {
+    border-bottom: none;
+}
+
+.time-slot,
+.status-slot {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Row States */
+.timetable-row.available:hover {
+    background: #e0ffe1;
+}
+
+.timetable-row.selected {
+    background: #4CAF50;
+    color: white;
+}
+
+.timetable-row.reserved {
+    background: #ff9494;
+    color: white;
+    cursor: not-allowed;
+}
+
+.timetable-row.reserved:hover {
+    background: #ff9494;
+}
+
+/* Reserve Button */
+.reserve-button {
+    display: block;
+    margin: 20px auto;
+    
+    background: #FF7043;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+    background-color: #D84315;
+}

@@ -1,0 +1,149 @@
+/* Slider Container */
+.slider {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  width: 100%; 
+  transform: scale(0.7); 
+  transform-origin: center center; 
+  margin: 0 auto; 
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+/* Slide */
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Slide Content */
+.slide-content {
+  width: 30%;
+  padding: 40px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+  z-index: 2; /* Ensure text is above the image */
+  padding-right: 0;
+}
+
+.slide-title {
+  font-size: 4vh;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-right: 25px;
+}
+
+.slide-text {
+  font-size: 3vh;
+  margin-bottom: 1vh;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Slide Image */
+.slide-image {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Navigation Arrows */
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  font-size: 4em;
+  cursor: pointer;
+  color: #ffae00;
+}
+
+.arrows :hover{
+  color: #d39000;
+  transition: 0.3s;
+}
+
+.next {
+  margin-right: 10px;
+}
+
+.prev {
+  margin-left: 10px;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  gap: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cccccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: black;
+}
+
+
+/* View All News Button */
+.view-all-news {
+  position: absolute;
+  bottom: 30px;
+  left: 19%;
+  font-size: 0.9rem;
+}
+
+.view-all-news a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.view-all-news a:hover {
+  text-decoration: underline;
+}
